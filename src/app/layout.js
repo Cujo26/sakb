@@ -11,8 +11,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
+			<link rel="icon" href="/sakb.ico" sizes="any" />
 			<body className={inter.className}>{children}</body>
 		</html>
 	)
 }
-

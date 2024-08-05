@@ -1,5 +1,6 @@
 "use client"
 import React from "react"
+import Image from "next/image"
 
 export default function Header() {
 	const [navbarOpen, setNavbarOpen] = React.useState(false)
@@ -7,7 +8,8 @@ export default function Header() {
 	return (
 		<header class="text-white body-font">
 			<div class="container mx-auto flex flex-wrap p-5 md:flex-row">
-				<a class="flex title-font font-medium text-white mb-4 md:mb-0 pr-4" href="/">
+				<a class="flex title-font font-medium text-white mb-4 md:mb-0 pr-4 items-center" href="/">
+					<Image src="/sakb.png" width={150} height={150} className="p-2 aspect-square h-12 w-12"></Image>
 					<span class="ml-3 text-3xl">SAKB</span>
 				</a>
 				<button
@@ -37,9 +39,9 @@ export default function Header() {
 						<a class="mr-6 hover:text-white" href="/">
 							Home
 						</a>
-						{/* <a class="mr-6 hover:text-white" href="/contact">
-							Contact
-						</a> */}
+						<a class="mr-6 hover:text-white" href="/meetups">
+							Meetups
+						</a>
 					</nav>
 				</div>
 			</div>
