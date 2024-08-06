@@ -7,11 +7,11 @@ export default function PostCard({ slug, title, description, image }) {
 		<div className="card block w-full h-28 my-4 bg-white bg-opacity-10 p-2 rounded-lg">
 			<a href={`/blogs/${slug}`} className="flex flex-row w-full h-full justify-between">
 				<div className="p-4 flex flex-col justify-between">
-					<p key={slug} className="text-2xl text-white">
+					<p key={slug} className="text-2xl text-white font-bold tracking-tighter">
 						{title}
 					</p>
 					<p key="a" className=" text-white">
-						Yap Yap yap description goes here.
+						Yap yap yap description goes here.
 					</p>
 				</div>
 				<div className="aspect-video">
