@@ -1,13 +1,24 @@
 import React from "react"
+import Image from "next/image"
+import { getPostData } from "../../lib/getPostData"
 
-export default function PostCard({ slug, title, description }) {
+export default function PostCard({ slug, title, description, image }) {
 	return (
-		<div className="card block bg-gray-500 w-full h-8">
-			<a href={`/blogs/${slug}`} className="block w-full h-full">
-				<p key={slug} className="text-2xl text-white">
-					{title}
-				</p>
+		<div className="card block w-full h-28 my-4 bg-white bg-opacity-10 p-2 rounded-lg">
+			<a href={`/blogs/${slug}`} className="flex flex-row w-full h-full justify-between">
+				<div className="p-4 flex flex-col justify-between">
+					<p key={slug} className="text-2xl text-white">
+						{title}
+					</p>
+					<p key="a" className=" text-white">
+						Yap Yap yap description goes here.
+					</p>
+				</div>
+				<div className="aspect-video">
+					<Image src={"/" + image} width={600} height={600} className="object-cover h-full w-auto rounded-md"></Image>
+				</div>
 			</a>
 		</div>
 	)
 }
+
