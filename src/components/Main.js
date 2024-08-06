@@ -9,7 +9,7 @@ export default function Main() {
 					<br></br>
 					<p className="mx-auto  text-xl font-normal leading-relaxed text-gray-600 dark:text-gray-300 lg:w-2/3">
 						Join the{" "}
-						<a src="https://discord.gg/VARz8sQ6Sd" className="hover:underline">
+						<a href="https://discord.gg/VARz8sQ6Sd" className="hover:underline">
 							Discord server
 						</a>
 						!
