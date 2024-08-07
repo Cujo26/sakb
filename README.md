@@ -1,6 +1,6 @@
 # SAKB Website
 
-Contribute by adding `.md` pages to the `posts` folder. (see [Example post](/main/posts/example-post.md))
+Contribute by adding `.md` pages to the `posts` folder. (see [Example post](/posts/example-post.md))
 
 ## Running locally
 
