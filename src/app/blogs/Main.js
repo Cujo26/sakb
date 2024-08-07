@@ -1,6 +1,3 @@
-import fs from "fs"
-import path from "path"
-import matter from "gray-matter"
 import { getPostNames, getPostData } from "../../../lib/getPostData"
 import PostCard from "@/components/PostCard"
 
@@ -9,7 +6,7 @@ export default async function Main() {
 
 	return (
 		<section className="text-black body-font lg:pt-20 mb-auto">
-			<div className="flex mx-auto justify-center items-center w-full flex-col px-24 max-w-screen-lg">
+			<div className="flex mx-auto justify-center items-center w-full flex-col px-4 lg:px-24 lg:max-w-screen-lg">
 				<h1 className="mb-2 text-6xl font-bold tracking-tighter text-white lg:text-8xl md:text-7xl">
 					<span>Blogs</span>
 				</h1>
@@ -17,12 +14,11 @@ export default async function Main() {
 					<span>Chronicling the works of the community.</span>
 				</h2>
 				<div className="flex justify-start items-start w-full">
-					{allPostsData.map(({ slug, title, image }) => (
-						<PostCard key={slug} slug={slug} title={title} image={image} />
-					))}
+					{allPostsData.map(
+						({ slug, title, image, blurb, on }) => on && <PostCard key={slug} slug={slug} title={title} image={image} blurb={blurb} />
+					)}
 				</div>
 			</div>
 		</section>
 	)
 }
-

@@ -7,7 +7,6 @@ import { getPostData } from "/lib/getPostData"
 
 export default async function Home({ params }) {
 	const postData = await getPostData(params.slug)
-	console.log(postData)
 	return (
 		<div className="text-white bg-black overflow-x-hidden flex flex-col justify-between min-h-screen">
 			<Head>
@@ -19,4 +18,3 @@ export default async function Home({ params }) {
 		</div>
 	)
 }
-

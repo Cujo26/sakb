@@ -1,7 +1,9 @@
 ---
 title: "Highlight: lukevanlukevan"
-author: [{ name: "Luke Van", link: "https://github.com/lukevanlukevan" }]
+author: "Luke Van"
 image: "Vandura_GoodCaps.jpg"
+blurb: "Luke showcases his recent handwire builds."
+on: false
 ---
 
 I am just testing using myself I am not that vain I promise.
