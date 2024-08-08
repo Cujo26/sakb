@@ -1,6 +1,7 @@
 "use client"
 import React from "react"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function Header() {
 	const [navbarOpen, setNavbarOpen] = React.useState(false)
@@ -8,10 +9,10 @@ export default function Header() {
 	return (
 		<header className="text-white body-font backdrop-blur-md top-0 sticky w-screen pl-3">
 			<div className="container mx-auto flex flex-wrap p-5 md:flex-row">
-				<a className="flex title-font font-medium text-white mb-4 md:mb-0 pr-4 items-center" href="/">
+				<Link className="flex title-font font-medium text-white mb-4 md:mb-0 pr-4 items-center" href="/">
 					<Image src="/sakb.png" width={150} height={150} className="p-2 aspect-square h-12 w-12"></Image>
 					<span className="text-3xl">SAKB</span>
-				</a>
+				</Link>
 				<button
 					className="text-white cursor-pointer text-xl leading-none py-1 border border-solid border-transparent rounded bg-transparent block md:hidden outline-none focus:outline-none ml-auto pb-3"
 					type="button"
@@ -36,15 +37,15 @@ export default function Header() {
 				</button>
 				<div className={"md:flex flex-grow items-center" + (navbarOpen ? " flex" : " hidden")} id="example-navbar-danger">
 					<nav className="md:ml-auto flex flex-wrap items-center text-base justify-center font-semibold pl-7">
-						<a className="mr-6 hover:text-white" href="/">
+						<Link className="mr-6 hover:text-white" href="/">
 							Home
-						</a>
-						<a className="mr-6 hover:text-white" href="/blogs">
+						</Link>
+						<Link className="mr-6 hover:text-white" href="/blogs">
 							Blogs
-						</a>
-						<a className="mr-6 hover:text-white" href="/meetups">
+						</Link>
+						<Link className="mr-6 hover:text-white" href="/meetups">
 							Meetups
-						</a>
+						</Link>
 					</nav>
 				</div>
 			</div>
